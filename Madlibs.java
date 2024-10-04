@@ -20,5 +20,22 @@ public class Madlibs {
         int indexRight3 = partBad2.indexOf(">");
         String part3 = madlibFull.substring(indexRight2, indexLeft3);
         String part4 = madlibFull.substring(indexRight3);
+
+        String word1 = madlibFull.substring(indexLeft1, (indexRight1-1));
+        String word2 = madlibFull.substring(indexLeft2, (indexRight2-1));
+        String word3 = madlibFull.substring(indexLeft3, (indexRight3-1));
+
+        System.out.println("Here's a MadLib for you!");
+        System.out.println("Please give me a " + word1);
+        String inputWord1 = scanner.nextLine();
+        System.out.println("Thanks! Next, a " + word2);
+        String inputWord2 = scanner.nextLine();
+        System.out.println("Finally, a " + word3);
+        String inputWord3 = scanner.nextLine();
+        System.out.println("Developing MadLib...");
+        
+
+
+
     }
 }
