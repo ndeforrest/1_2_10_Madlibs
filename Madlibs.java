@@ -4,9 +4,9 @@ public class Madlibs {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String madlibFull = "I went to the animal <noun>, the <plural noun> and the <number> beasts were there.";
-        //madlibFull = "Once upon a time in a <adjective> land, a <noun> <adjective> grew.";
-        //madlibFull = "<name> was very <adjective> today, so they went to <place>";
+        //String madlibFull = "I went to the animal <noun>, the <plural noun> and the <number> beasts were there.";
+        //String madlibFull = "Once upon a time in a <adjective> land, a <noun> <adjective> grew.";
+        String madlibFull = "<name> was very <adjective> today, so they went to <place>!";
 
         int indexLeft1 = madlibFull.indexOf("<");
         int indexRight1 = madlibFull.indexOf(">");
@@ -30,16 +30,14 @@ public class Madlibs {
         String word3 = madlibFull.substring(indexLeft3+1, indexRight3);
 
         System.out.println("Here's a MadLib for you!");
-        System.out.println("Please give me a " + word1);
+        System.out.println("Please give me a " + word1 + ":");
         String inputWord1 = scanner.nextLine();
-        System.out.println("Thanks! Next, a " + word2);
+        System.out.println("Thanks! Next, a " + word2 + ":");
         String inputWord2 = scanner.nextLine();
-        System.out.println("Finally, a " + word3);
+        System.out.println("Finally, a " + word3 + ":");
         String inputWord3 = scanner.nextLine();
         System.out.println("Developing MadLib...");
-        
 
-
-
+        System.out.println(part1 + inputWord1 + part2 + inputWord2 + part3 + inputWord3 + part4);
     }
 }
