@@ -16,28 +16,28 @@ public class Madlibs {
 
         int indexLeft2 = partExtra1.indexOf("<") + partReference1.length();     //find indexes for second word
         int indexRight2 = partExtra1.indexOf(">") + partReference1.length();
-        String part2 = madlibFull.substring(indexRight1+1, indexLeft2);         //find first section before first word
+        String part2 = madlibFull.substring(indexRight1+1, indexLeft2);         //find section between first and second word
         String partExtra2 = madlibFull.substring(indexRight2+1);            //find section after first word to be able to find indexes of 3rd word
-        String partReference2 = madlibFull.substring(0, (indexRight2 + 1));         //Find length of start to end of first word to calculate index of 3rd word
+        String partReference2 = madlibFull.substring(0, (indexRight2 + 1));         //Find length of start to end of second word to calculate index of 3rd word
 
         int indexLeft3 = partExtra2.indexOf("<") + partReference2.length();     //find indexes of third word
         int indexRight3 = partExtra2.indexOf(">") + partReference2.length();
         String part3 = madlibFull.substring(indexRight2+1, indexLeft3);         //find part 3 section
         String part4 = madlibFull.substring(indexRight3+1);         //part 4, last section
 
-        String word1 = madlibFull.substring(indexLeft1+1, indexRight1);     //grammar words
+        String word1 = madlibFull.substring(indexLeft1+1, indexRight1);     //set grammar words
         String word2 = madlibFull.substring(indexLeft2+1, indexRight2);
         String word3 = madlibFull.substring(indexLeft3+1, indexRight3);
     
         System.out.println("Here's a MadLib for you!");
-        System.out.println("Please give me a " + word1 + ":");
+        System.out.println("Please give me a " + word1 + ":");      //madlib word 3
         String inputWord1 = scanner.nextLine();
-        System.out.println("Thanks! Next, a " + word2 + ":");
+        System.out.println("Thanks! Next, a " + word2 + ":");      //madlib word 2
         String inputWord2 = scanner.nextLine();
-        System.out.println("Finally, a " + word3 + ":");
+        System.out.println("Finally, a " + word3 + ":");      //madlib word 3
         String inputWord3 = scanner.nextLine();
         System.out.println("Developing MadLib...");
 
-        System.out.println(part1 + inputWord1 + part2 + inputWord2 + part3 + inputWord3 + part4);       //Final
+        System.out.println(part1 + inputWord1 + part2 + inputWord2 + part3 + inputWord3 + part4);       //Final print line
     }
 }
